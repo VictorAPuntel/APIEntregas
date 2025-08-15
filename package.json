@@ -1,0 +1,28 @@
+{
+  "name": "rocketlog",
+  "version": "1.0.0",
+  "description": "API de entregas de encomendas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorAPuntel/APIEntregas.git"
+  },
+  "author": "Victor Puntel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorAPuntel/APIEntregas/issues"
+  },
+  "homepage": "https://github.com/VictorAPuntel/APIEntregas#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.12",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
