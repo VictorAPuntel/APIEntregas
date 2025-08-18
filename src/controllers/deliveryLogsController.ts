@@ -20,8 +20,12 @@ class DeliveryLogsController {
       throw new AppError('Delivery not found', 404)
     }
 
+    if (delivery.status === 'delivered') {
+      throw new AppError('This order has already been delivered')
+    }
+
     if (delivery.status === 'processing') {
-      throw new AppError('change status to shipped', 404)
+      throw new AppError('change status to shipped')
     }
 
     await prisma.deliveryLog.create({
