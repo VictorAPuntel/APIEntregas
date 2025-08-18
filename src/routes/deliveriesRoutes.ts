@@ -2,7 +2,7 @@ import { Router } from 'express'
 import { DeliveriesController } from '@/controllers/deliveriesController'
 import { ensureAuthenticated } from '@/middlewares/ensureAutheticated'
 import { verifyUserAuthorization } from '@/middlewares/verifyUserAuthorization'
-import { DeliveriesStatusController } from '@/controllers/deliveriesStatusCOntroller'
+import { DeliveriesStatusController } from '@/controllers/deliveriesStatusController'
 
 const deliveriesRoutes = Router()
 const deliveriesController = new DeliveriesController()
