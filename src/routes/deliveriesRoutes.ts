@@ -4,14 +4,14 @@ import { ensureAuthenticated } from '@/middlewares/ensureAutheticated'
 import { verifyUserAuthorization } from '@/middlewares/verifyUserAuthorization'
 import { DeliveriesStatusController } from '@/controllers/deliveriesStatusCOntroller'
 
-const deliveriesRoute = Router()
+const deliveriesRoutes = Router()
 const deliveriesController = new DeliveriesController()
 const deliveriesStatusController = new DeliveriesStatusController()
 
-deliveriesRoute.use(ensureAuthenticated, verifyUserAuthorization(['sale']))
-deliveriesRoute.get('/', deliveriesController.index)
-deliveriesRoute.post('/', deliveriesController.create)
+deliveriesRoutes.use(ensureAuthenticated, verifyUserAuthorization(['sale']))
+deliveriesRoutes.get('/', deliveriesController.index)
+deliveriesRoutes.post('/', deliveriesController.create)
 
-deliveriesRoute.patch('/:id/status', deliveriesStatusController.update)
+deliveriesRoutes.patch('/:id/status', deliveriesStatusController.update)
 
-export { deliveriesRoute }
+export { deliveriesRoutes }
